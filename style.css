@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+    body {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    body {
+        font-size: 1.4rem;
+    }
+}
