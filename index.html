@@ -12,5 +12,93 @@
         <link rel="stylesheet" href="style.css" />
         <title>Contact Page</title>
     </head>
-    <body></body>
+    <body>
+        <main class="container">
+            <nav class="navbar slide-right">
+                <img src="./assets/contact-form-icon.svg" alt="icon" />
+            </nav>
+            <section class="header">
+                <h1 class="title slide-left">
+                    Interested in our business pricing?
+                </h1>
+                <p class="description slide-right">
+                    Fill out the form to view details and we’ll contact you as
+                    soon as possible.
+                </p>
+            </section>
+
+            <form class="form slide-left">
+                <div class="grid-dual slide-right">
+                    <div class="form-group">
+                        <label class="input-label" for="name">Name</label>
+                        <input
+                            class="input"
+                            type="text"
+                            id="name"
+                            placeholder="Ethan Johnson"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label class="input-label" for="email"
+                            >Company Email</label
+                        >
+                        <input
+                            class="input"
+                            type="email"
+                            id="email"
+                            placeholder="ethan@johnson.com"
+                        />
+                    </div>
+                </div>
+                <div class="grid-dual slide-right">
+                    <div class="form-group">
+                        <label class="input-label" for="company-size"
+                            >Company Size</label
+                        >
+                        <div class="custom-select-container">
+                            <select class="select" id="company-size">
+                                <option value="50-100">50-100 employees</option>
+                                <option value="100-150">
+                                    101-150 employees
+                                </option>
+                                <option value="151-200">
+                                    151-200 employees
+                                </option>
+                            </select>
+                            <div class="custom-arrow"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="input-label" for="subject">Subject</label>
+                        <div class="custom-select-container">
+                            <select class="select" id="subject">
+                                <option value="building-landing-pages">
+                                    Building Landing pages
+                                </option>
+                                <option value="building-ecommerce-pages">
+                                    Building Ecommerce pages
+                                </option>
+                                <option value="building-mobile-apps">
+                                    Building Mobile apps
+                                </option>
+                            </select>
+                            <div class="custom-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group slide-right">
+                    <label class="input-label" for="message">Message</label>
+                    <textarea
+                        type="email"
+                        id="message"
+                        placeholder="Enter your message here"
+                        rows="8"
+                    >
+50-100 employees</textarea
+                    >
+                </div>
+                <button class="btn slide-left">Contact Sales</button>
+            </form>
+        </main>
+    </body>
 </html>

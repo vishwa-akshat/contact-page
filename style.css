@@ -1,29 +1,225 @@
+:root {
+    --purple: #4036a9;
+    --dark: #111729;
+    --gray: #cdd5e0;
+    --light-gray: #f8fafc;
+    --light: #ffffff;
+}
+
 * {
     box-sizing: border-box;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 body {
     font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 1.6rem;
     margin: 0;
     padding: 0;
+    background-image: url("./assets/bg-image.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
 }
 
-/* Desktop */
-@media (min-width: 1280px) {
-    body {
-        max-width: 1280px;
-        margin: 0 auto;
-    }
+h1,
+p {
+    margin: 0;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto 100px;
+}
+
+.navbar {
+    padding: 1.563rem 3.125rem;
+}
+
+.header {
+    text-align: center;
+    color: var(--light);
+    width: 40rem;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.description {
+    margin-top: 1.25rem;
+    font-size: 2rem;
+    line-height: 2.8rem;
+}
+
+.form {
+    width: 50rem;
+    margin: 0 auto;
+    padding: 1.563rem;
+    background-color: #ffffff34;
+    border-radius: 1rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.grid-dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--light);
+}
+
+.input,
+#message {
+    font-family: "Be Vietnam Pro", sans-serif;
+    height: 3.75rem;
+    border-radius: 0.875rem;
+    border: none;
+    background-color: var(--light-gray);
+    font-size: 1rem;
+    padding: 0 1.25rem;
+    outline: none;
+    color: var(--dark);
+    font-weight: 600;
+}
+.input::placeholder {
+    color: var(--gray);
+}
+
+.custom-select-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 0.875rem;
+    background-color: var(--light-gray);
+}
+
+.custom-select-container select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 2.5em;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    right: 0.75em;
+    width: 1.05rem;
+    height: 0.5rem;
+    pointer-events: none;
+    transform: translateY(-50%);
+    background: url("./assets/Expand_down.svg") no-repeat center center;
+}
+
+.select {
+    font-family: "Be Vietnam Pro", sans-serif;
+    height: 3.75rem;
+    border-radius: 0.875rem;
+    background-color: var(--light-gray);
+    border: none;
+    font-size: 1rem;
+    padding: 0 1.25rem;
+    outline: none;
+    color: var(--dark);
+    font-weight: 600;
+    width: 100%;
+}
+
+#message {
+    resize: none;
+    padding: 1.875rem;
+    height: auto;
+}
+
+.btn {
+    font-size: 1.25rem;
+    font-weight: 600;
+    height: 3.75rem;
+    border-radius: 0.875rem;
+    border: none;
+    color: var(--purple);
+    cursor: pointer;
 }
 
 /* Mobile */
-@media (max-width: 640px) {
-    body {
-        font-size: 1.4rem;
+@media (max-width: 840px) {
+    html {
+        font-size: 0.875rem;
     }
+}
+@media (max-width: 640px) {
+    html {
+        font-size: 10px;
+    }
+
+    .header {
+        width: 70%;
+        margin: 20px auto;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+
+    .form {
+        width: 90%;
+    }
+
+    .grid-dual {
+        grid-template-columns: 1fr;
+    }
+
+    .custom-arrow {
+        right: 2em;
+        width: 20px;
+        height: 8px;
+    }
+}
+
+/* slide in from left */
+@keyframes slide-left {
+    0% {
+        transform: translateX(-100%);
+        filter: blur(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slide-left {
+    animation: slide-left 1.5s ease-in-out forwards;
+}
+
+/* slide in from right */
+@keyframes slide-right {
+    0% {
+        transform: translateX(100%);
+        filter: blur(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slide-right {
+    animation: slide-right 1.5s ease-in-out forwards;
 }
